@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using QuizPlatform.Models;
 
-namespace QuizPlatform.Services
+namespace QuizPlatform.Services.Interfaces
 {
   public interface IQuizManager
   {
-    List<Question> Shuffle(List<Question> questions);
+    void Shuffle(ref List<Question> questions);
   }
 }

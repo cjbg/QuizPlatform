@@ -9,12 +9,12 @@ namespace QuizPlatform.Controllers
 {
   public class QuizController : Controller
   {
-    private readonly QuizContext db = new QuizContext();
+    private readonly QuizContext _db = new QuizContext();
 
     // GET: /Quiz/
     public ActionResult Index()
     {
-      return View(db.Quizzes.ToList());
+      return View(_db.Quizzes.ToList());
     }
 
     // GET: /Quiz/Details/5
@@ -24,7 +24,7 @@ namespace QuizPlatform.Controllers
       {
         return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
       }
-      Quiz quiz = db.Quizzes.Find(id);
+      Quiz quiz = _db.Quizzes.Find(id);
       if (quiz == null)
       {
         return HttpNotFound();
@@ -47,8 +47,8 @@ namespace QuizPlatform.Controllers
     {
       if (ModelState.IsValid)
       {
-        db.Quizzes.Add(quiz);
-        db.SaveChanges();
+        _db.Quizzes.Add(quiz);
+        _db.SaveChanges();
         return RedirectToAction("Index");
       }
 
@@ -62,7 +62,7 @@ namespace QuizPlatform.Controllers
       {
         return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
       }
-      Quiz quiz = db.Quizzes.Find(id);
+      Quiz quiz = _db.Quizzes.Find(id);
       if (quiz == null)
       {
         return HttpNotFound();
@@ -79,8 +79,8 @@ namespace QuizPlatform.Controllers
     {
       if (ModelState.IsValid)
       {
-        db.Entry(quiz).State = EntityState.Modified;
-        db.SaveChanges();
+        _db.Entry(quiz).State = EntityState.Modified;
+        _db.SaveChanges();
         return RedirectToAction("Index");
       }
       return View(quiz);
@@ -93,7 +93,7 @@ namespace QuizPlatform.Controllers
       {
         return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
       }
-      Quiz quiz = db.Quizzes.Find(id);
+      Quiz quiz = _db.Quizzes.Find(id);
       if (quiz == null)
       {
         return HttpNotFound();
@@ -106,9 +106,9 @@ namespace QuizPlatform.Controllers
     [ValidateAntiForgeryToken]
     public ActionResult DeleteConfirmed(int id)
     {
-      Quiz quiz = db.Quizzes.Find(id);
-      db.Quizzes.Remove(quiz);
-      db.SaveChanges();
+      Quiz quiz = _db.Quizzes.Find(id);
+      _db.Quizzes.Remove(quiz);
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
@@ -116,7 +116,7 @@ namespace QuizPlatform.Controllers
     {
       if (disposing)
       {
-        db.Dispose();
+        _db.Dispose();
       }
       base.Dispose(disposing);
     }

@@ -119,7 +119,7 @@ namespace QuizPlatform.Controllers
       _db.Answers.Remove(answer);
       _db.SaveChanges();
 
-      return RedirectToAction("Index", new { id = answer.QuestionId});
+      return RedirectToAction("Index", new { id = answer.QuestionId });
     }
 
     protected override void Dispose(bool disposing)
@@ -129,6 +129,12 @@ namespace QuizPlatform.Controllers
         _db.Dispose();
       }
       base.Dispose(disposing);
+    }
+
+    public ActionResult BackToList(int id)
+    {
+      int quizId = _db.Questions.Find(id).QuizId;
+      return RedirectToAction("Index", "Question", new { id = quizId });
     }
   }
 }

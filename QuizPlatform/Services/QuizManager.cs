@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using QuizPlatform.Models;
+using QuizPlatform.Services.Interfaces;
 
 namespace QuizPlatform.Services
 {
-  public class QuizManager : IQuizManager
+  public class QuizManager : IQuizManager, IService
   {
-    public List<Question> Shuffle(List<Question> questions)
+    public void Shuffle(ref List<Question> questions)
     {
       Random random = new Random();
-      return questions.OrderBy(x => random.Next()).ToList();
+      questions = questions.OrderBy(x => random.Next()).ToList();
     }
   }
 }

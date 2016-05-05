@@ -108,3 +108,7 @@ C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Microsoft.O
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\obj\Debug\QuizPlatform.csprojResolveAssemblyReference.cache
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\obj\Debug\QuizPlatform.dll
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\obj\Debug\QuizPlatform.pdb
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Core.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Windsor.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Core.xml
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Windsor.xml

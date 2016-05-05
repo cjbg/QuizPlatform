@@ -1,4 +1,4 @@
-﻿namespace QuizPlatform.Models.Domain
+﻿namespace QuizPlatform.Models
 {
   public enum Sets
   {

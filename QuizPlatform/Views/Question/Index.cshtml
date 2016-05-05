@@ -1,11 +1,17 @@
-﻿@model IEnumerable<QuizPlatform.Models.Question>
+﻿@using QuizPlatform.Models.Domain
+@model IEnumerable<QuizPlatform.Models.Question>
 
 @{
-  ViewBag.Title = "Index";
+  ViewBag.Title = "Questions";
 }
 
-<h2>Quizzes</h2>
+<h2>Questions</h2>
+<br/>
+<br/>
 
+<h3>Nazwa: @MySession.Current.QuizName</h3>
+<br/>
+  
 <p>
   @Html.ActionLink("Create New", "Create", new { id = ViewBag.QuizId })
   @Html.ActionLink("Back to List", "Index", "Quiz", new { id = ViewBag.QuizId }, null)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.Entity;
-using QuizPlatform.Models.Domain;
 
 namespace QuizPlatform.Models
 {

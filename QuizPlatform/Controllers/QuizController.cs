@@ -3,12 +3,13 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using QuizPlatform.Models;
+using QuizPlatform.Models.Domain;
 
 namespace QuizPlatform.Controllers
 {
   public class QuizController : Controller
   {
-    private QuizContext db = new QuizContext();
+    private readonly QuizContext db = new QuizContext();
 
     // GET: /Quiz/
     public ActionResult Index()
@@ -118,6 +119,12 @@ namespace QuizPlatform.Controllers
         db.Dispose();
       }
       base.Dispose(disposing);
+    }
+
+    public ActionResult ShowQuestions(int id, string name)
+    {
+      MySession.Current.QuizName = name;
+      return RedirectToAction("Index", "Question", new {id});
     }
   }
 }

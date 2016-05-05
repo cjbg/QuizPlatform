@@ -3,8 +3,9 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Castle.Windsor;
+using Castle.Windsor.Installer;
+using QuizPlatform.Factories;
 using QuizPlatform.Installers;
-using QuizPlatform.Plumbing;
 
 namespace QuizPlatform
 {
@@ -14,9 +15,10 @@ namespace QuizPlatform
 
     private static void BootstrapWindsorContainer()
     {
-      _container = new WindsorContainer();
-      _container.Install(new ServiceInstaller());
-      _container.Install(new ControllerInstaller());
+      _container = new WindsorContainer()
+        .Install(FromAssembly.This());
+      //_container.Install(new ServiceInstaller());
+      //_container.Install(new ControllerInstaller());
 
       var factory = new WindsorControllerFactory(_container.Kernel);
       ControllerBuilder.Current.SetControllerFactory(factory);

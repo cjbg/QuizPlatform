@@ -41,6 +41,8 @@ namespace QuizPlatform.Controllers
 
       _quizManager.Shuffle(ref questions);
 
+      //TODO: add automapper
+
       return View(quiz);
     }
   }

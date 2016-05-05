@@ -112,3 +112,8 @@ C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Core
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Windsor.dll
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Core.xml
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Windsor.xml
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Facilities.Logging.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Services.Logging.Log4netIntegration.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\log4net.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Facilities.Logging.xml
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\log4net.xml

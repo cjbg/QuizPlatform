@@ -19,6 +19,10 @@ namespace QuizPlatform.Models
     [MaxLength(50, ErrorMessage = "Pole może zawierać maksymalnie 50 znaków")]
     public string Name { get; set; }
 
+    [DisplayName("Odpowiedź poprawna")]
+    [Required(ErrorMessage = "Podaj czy odpowiedź jest poprawna")]
+    public bool IsCorrect { get; set; }                   
+
     public virtual Question Question { get; set; }
   }
 }

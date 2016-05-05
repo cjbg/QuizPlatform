@@ -1,0 +1,24 @@
+﻿@model QuizPlatform.Models.Quiz
+
+@{
+  ViewBag.Title = "Start";
+}
+
+<h2>@Model.Name</h2>
+
+<div>
+  <h4>Quiz</h4>
+  <hr />
+  <dl class="dl-horizontal">
+    <dt>
+      <div id="question"></div>
+      <br/>
+    </dt>
+    <dd>
+      <div id="answer"></div>
+    </dd>    
+  </dl>
+</div>
+<p>
+  @Html.ActionLink("Back to List", "Index")
+</p>

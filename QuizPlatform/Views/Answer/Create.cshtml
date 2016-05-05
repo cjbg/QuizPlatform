@@ -15,13 +15,21 @@
     <h4>Answer</h4>
     <hr />
     @Html.ValidationSummary(true)
-    @Html.HiddenFor(model => model.QuestionId)    
+    @Html.HiddenFor(model => model.QuestionId)
 
     <div class="form-group">
-      @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+      @Html.LabelFor(model => model.Name, new {@class = "control-label col-md-2"})
       <div class="col-md-10">
         @Html.EditorFor(model => model.Name)
         @Html.ValidationMessageFor(model => model.Name)
+      </div>
+    </div>
+
+    <div class="form-group">
+      @Html.LabelFor(model => model.IsCorrect, new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+        @Html.CheckBoxFor(model => model.IsCorrect)
+        @Html.ValidationMessageFor(model => model.IsCorrect)
       </div>
     </div>
 

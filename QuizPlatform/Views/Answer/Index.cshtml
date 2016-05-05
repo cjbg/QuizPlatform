@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Answers</h2>
 
 <p>
   @Html.ActionLink("Create New", "Create", new {id = ViewBag.QuestionId})
@@ -12,10 +12,7 @@
 </p>
 
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.QuestionId)
-        </th>
+    <tr>        
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -23,10 +20,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.QuestionId)
-        </td>
+    <tr>        
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>

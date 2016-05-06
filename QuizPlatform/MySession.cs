@@ -1,6 +1,7 @@
 ﻿using System.Web;
+using QuizPlatform.Resources;
 
-namespace QuizPlatform.Models.Domain
+namespace QuizPlatform
 {
   public class MySession
   {
@@ -13,13 +14,13 @@ namespace QuizPlatform.Models.Domain
     {
       get
       {
-        MySession session = 
-          (MySession) HttpContext.Current.Session["MySession"];
+        MySession session =
+          (MySession)HttpContext.Current.Session[Constants.MySession];
 
         if (session == null)
         {
           session = new MySession();
-          HttpContext.Current.Session["MySession"] = session;
+          HttpContext.Current.Session[Constants.MySession] = session;
         }
 
         return session;

@@ -117,3 +117,5 @@ C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Serv
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\log4net.dll
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\Castle.Facilities.Logging.xml
 C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\log4net.xml
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\AutoMapper.dll
+C:\Users\cjbg\Desktop\Documents\GitHub\QuizPlatform\QuizPlatform\bin\AutoMapper.xml

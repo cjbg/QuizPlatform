@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using QuizPlatform.Models;
 using QuizPlatform.Services.Interfaces;
@@ -40,8 +41,13 @@ namespace QuizPlatform.Controllers
         .ToList();
 
       _quizManager.Shuffle(ref questions);
+      
+      var domainQuestions = MapperConfig.Mapper
+        .Map<List<Question>, List<Models.Domain.Question>>(questions);
 
-      //TODO: add automapper
+      //TODO: Store in cache with useridentity
+      //TODO: Take first question and load answers with ajax 
+      //TODO: After answering the question set repetitonNumber with ajax
 
       return View(quiz);
     }

@@ -27,6 +27,9 @@ namespace QuizPlatform
                 "~/Content/bootstrap.css",
                 "~/Content/site.css"));
 
+      bundles.Add(new ScriptBundle("~/bundles/jqueryAjax").Include(
+                  "~/Scripts/jquery.unobtrusive-ajax.js"));
+
       bundles.Add(new ScriptBundle("~/bundles/quizStart").Include(
                 "~/Scripts/quizStart.js"));
     }

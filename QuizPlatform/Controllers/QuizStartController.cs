@@ -68,7 +68,16 @@ namespace QuizPlatform.Controllers
       Guard.NotNull(questions, () => questions);
       Models.Domain.Question question = questions[Convert.ToInt32(questionCounter)];
 
-      return Json(question, JsonRequestBehavior.AllowGet);
+      return Json(question);
+    }
+
+    public PartialViewResult GetAnswers(int questionId)
+    {
+      List<Answer> answers = _db.Answers
+        .Where(x => x.QuestionId == questionId)
+        .ToList();
+
+      return PartialView("_Answers", answers);
     }
   }
 }

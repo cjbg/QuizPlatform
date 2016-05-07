@@ -8,23 +8,31 @@
 </script>
 
 <h2>@Model.Name</h2>
+<br />
 
 <div>
-  <h4>Quiz</h4>
+  @using (Ajax.BeginForm("GetAnswers", "QuizStart", new { questionId = "_questionId_"},
+    new AjaxOptions
+  {
+    HttpMethod = "Post",
+    UpdateTargetId = "answers",
+    InsertionMode = InsertionMode.Replace
+  },
+  new { id = "ajaxForm", target = "_self" }))
+  {
+    <h4 id="questionName"></h4>
+    <hr />
+    <br />
+  }
+  
+  @Html.Partial("_Answers", new List<QuizPlatform.Models.Answer>())
+  <br />
   <hr />
-  <dl class="dl-horizontal">
-    <dt>
-      <div id="question"></div>
-      <br />
-    </dt>
-    <dd>
-      <div id="answer"></div>
-    </dd>
-  </dl>
 </div>
 <p>
   @Html.ActionLink("Back to List", "Index")
 </p>
 @section Scripts {
   @Scripts.Render("~/bundles/quizStart")
+  @Scripts.Render("~/bundles/jqueryAjax")
 }

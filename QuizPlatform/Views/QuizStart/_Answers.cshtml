@@ -1,0 +1,10 @@
+﻿@model IEnumerable<QuizPlatform.Models.Answer>
+
+<ul id="answers">
+
+  @foreach (var item in Model)
+  {
+    <li>@Html.CheckBox(item.Name, false, new {id = "answer_" + item.Id}) @item.Name</li>
+  }
+
+</ul>
